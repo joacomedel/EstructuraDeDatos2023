@@ -28,7 +28,7 @@ public class Lista {
     }
 
     public boolean eliminar(int posc) {
-        boolean retorna = posc >= 0 && posc < longitud && cabecera != null; // Si la posicion es valida entra en el if ,                                                                  // sino devuelve false
+        boolean retorna = posc >= 0 && posc < longitud+1 && cabecera != null; // Si la posicion es valida entra en el if ,                                                                  // sino devuelve false
         if (retorna) {
             if (posc == 0) {
                 cabecera = cabecera.getEnlace();
@@ -56,9 +56,9 @@ public class Lista {
     }
     public int localizar(Object obj){
         int retorna= -1;
-        int i = 0;
+        int i = 1;
         Nodo temp = cabecera;
-        while (retorna == -1 && i < longitud){
+        while (retorna == -1 && i < longitud+1){
             if(temp.getElem().equals(obj))
             retorna = i;
 
